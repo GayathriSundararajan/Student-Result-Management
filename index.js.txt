@@ -1,0 +1,33 @@
+function result() {
+	var students={
+		PRIYA : {
+			maths: "100",
+			physics: "80",
+			chemistry:"60"
+		},
+		ARUNA : {
+			maths: "99",
+			physics: "87",
+			chemistry: "79"
+		},
+		SUJI : {
+			maths: "67",
+			physics: "56",
+			chemistry: "90"
+		}
+	}
+
+
+	var studentname=document.getElementById("Studentname").value;
+	var input=studentname.toUpperCase();
+	var definition=students[input];
+	var output=document.getElementById("output");
+
+	if (definition==undefined) {
+		output.innerHTML=" There is no information about this student.";
+
+	}else{
+		output.innerHTML=` <br>maths score is ${definition.maths}. <br> physics score is ${definition.physics}. <br> chemistry score is ${definition.chemistry}.`;
+
+	};
+};
